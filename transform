@@ -1,0 +1,12 @@
+def encode(shift, messageIn):
+    result = ""
+    message = messageIn.upper()
+    length =  len(message)
+    for i in range(length):
+        result += chr(((ord(message[i])-65+shift)%26)+65)
+    return result
+
+
+test = " éaà"
+decal = 1
+print(encode(decal, test))
